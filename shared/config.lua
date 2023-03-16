@@ -1,15 +1,4 @@
--- CALLBACKS --
--- 'xt-cooldown:server:UniversalCooldown'
--- 'xt-cooldown:server:' + (TABLE NAME FROM Config.Cooldowns)
-
--- EVENTS --
--- 'xt-cooldown:server:UniversalCooldown'  (ARGS = BOOL)
--- 'xt-cooldown:server:Cooldown' + (TABLE NAME FROM Config.Cooldowns)
-
--- COMMANDS --
--- /cooldown [type] [bool]
--- type 'all' = universal cooldown
--- commandID = type
+-- DOCS: https://xtdev.gitbook.io/xt-docs/free-resources/xt-cooldowns
 
 Config = {}
 
