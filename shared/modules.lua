@@ -1,15 +1,5 @@
 QBCore = exports['qb-core']:GetCoreObject()
 
--- Client Notify --
-function XTClientNotify(text, type)
-	QBCore.Functions.Notify(text, type)
-end
-
--- Server Notify --
-function XTServerNotify(target, message, type)
-    TriggerClientEvent('QBCore:Notify', target, message, type)
-end
-
 -- Debug Print --
 function XTDebug(type, debugTxt)
     if debugTxt == nil then debugTxt = '' end
@@ -20,7 +10,6 @@ end
 
 -- Debug / Resource Print on Startup --
 AddEventHandler('onResourceStart', function(resource)
-    if resource == GetCurrentResourceName() then
-        XTDebug('xT Development', 'dsc.gg/xtdev ^7| '..resource)
-    end
+    if resource ~= GetCurrentResourceName() then return end
+    XTDebug('xT Development', 'dsc.gg/xtdev ^7| '..resource)
 end)

@@ -1,6 +1,6 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-local universalCooldown = false
-local cooldowns = {}
+function XTServerNotify(target, message, type)
+    TriggerClientEvent('QBCore:Notify', target, message, type)
+end
 
 -- Universal Cooldown --
 RegisterServerEvent('xt-cooldown:server:UniversalCooldown', function(bool)
@@ -104,10 +104,3 @@ else
         end
     end, 'admin')
 end
-
--- Debug / Resource Print on Startup --
-AddEventHandler('onResourceStart', function(resource)
-    if resource == GetCurrentResourceName() then
-        XTDebug('xT Development', 'dsc.gg/xtdev ^7| '..resource)
-    end
-end)

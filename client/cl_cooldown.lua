@@ -1,7 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-local universalCooldown = false
-local cooldowns = {}
-
 -- Cooldown Client Bool --
 RegisterNetEvent('xt-cooldown:client:CooldownBool', function(type, bool)
     if type == 'all' then
